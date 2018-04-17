@@ -1,0 +1,111 @@
+//Colors
+
+@primary-dark: #000000;
+@primary-white: #FFFFFF;
+
+@secondary-blue: #0556A5;
+@secondary-green: #00A56E;
+
+//Gradient
+
+.gradient {
+    display: inline-block;
+    position: relative;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+  
+}
+
+.gradient::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear,left top, right top,from(@secondary-blue), to(@secondary-green));
+    background: linear-gradient(to right,@secondary-blue, @secondary-green);
+    pointer-events: none;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@secondary-blue', endColorstr='@secondary-green',GradientType=1 );
+}
+
+.gradient::before {
+    mix-blend-mode: screen;
+}
+.gradient-test{
+  /* IE10+ */ 
+    background: -ms-linear-gradient(left, @secondary-blue , secondary-green );
+    /* Mozilla Firefox */ 
+    background: -moz-linear-gradient(right, @secondary-blue , @secondary-green );
+
+    /* Opera */ 
+    background: -o-linear-gradient(right, @secondary-blue , @secondary-green );
+    /* Webkit (Safari/Chrome 10) */ 
+    background: -webkit-gradient(linear, left, right, color-stop(0, @secondary-blue), color-stop(100, @secondary-green));
+
+    /* Webkit (Chrome 11+) */ 
+    background: -webkit-linear-gradient(left, @secondary-blue , @secondary-green );
+
+    /* W3C Markup */ 
+    background: linear-gradient(to right, @secondary-blue , @secondary-green );
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@secondary-blue', endColorstr='@secondary-green',GradientType=1 );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    float: left;
+}
+//Footer
+
+@footer-gray: #F4F4F5;
+
+//Fonts
+
+// Import the fonts
+
+@font-face {
+  font-family: 'Interstate_exLight';
+  src: url('../fonts/Interstate_exLight.eot');
+  src: url('../fonts/Interstate_exLight.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Interstate_exLight.woff') format('woff'),
+  url('../fonts/Interstate_exLight.ttf') format('truetype'),
+  url('../fonts/Interstate_exLight.svg#fontname') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Interstate_Light';
+  src: url('../fonts/Interstate-Light.eot');
+  src: url('../fonts/Interstate-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Interstate-Light.woff') format('woff'),
+  url('../fonts/Interstate-Light.ttf') format('truetype'),
+  url('../fonts/Interstate-Light.svg#fontname') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Interstate_Regular';
+  src: url('../fonts/Interstate-Regular.eot');
+  src: url('../fonts/Interstate-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Interstate-Regular.woff') format('woff'),
+  url('../fonts/Interstate-Regular.ttf') format('truetype'),
+  url('../fonts/Interstate-Regular.svg#fontname') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Interstate_Bold';
+  src: url('../fonts/Interstate-Bold.ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-light: 'Interstate_Light', sans-serif;
+@font-ex-light: 'Interstate_exLight', sans-serif;
+@font-regular: 'Interstate_Regular', sans-serif;
+@font-bold: 'Interstate_Bold', sans-serif;
