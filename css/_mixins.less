@@ -1,0 +1,42 @@
+/*  ------------------------------------------------------------
+      Effects
+    ------------------------------------------------------------ */
+
+.outer-glow (@x: 0px, @y: 10px, @blur: 30px, @spread: 0px, @opacity: 0.15) {
+	//rgb 0 165 110 a 15
+	//x 0 y 10 blur 30
+	//hex 00A56E
+	//box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+
+	-moz-box-shadow: @x @y @blur @spread rgba(0, 165, 110, @opacity);
+	-moz-box-shadow: @x @y @blur @spread rgba(0, 165, 110, @opacity);
+	box-shadow: @x @y @blur @spread rgba(0, 165, 110, @opacity);
+
+}
+
+.desaturate {
+	filter: gray; /* IE */
+    -webkit-filter: grayscale(1); /* Old WebKit */
+    -webkit-filter: grayscale(100%); /* New WebKit */
+    filter: url(resources.svg#desaturate); /* older Firefox */
+    filter: grayscale(100%); /* Current draft standard */
+}
+
+.gradient-circular {
+	background: -moz-linear-gradient(rgba(5, 86, 165, 1) 0%, rgba(0, 165, 110, 1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(color-stop(0%,rgba(5, 86, 165, 1)), color-stop(100%,rgba(0, 165, 110, 1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(rgba(5, 86, 165, 1) 0%, rgba(0, 165, 110, 1) 100%); /* Chrome10+,Safari5.1+ */
+ 	background: -o-linear-gradient(rgba(5, 86, 165, 1) 0%,rgba(0, 165, 110, 1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(rgba(5, 86, 165, 1) 0%,rgba(0, 165, 110, 1) 100%); /* IE10+ */
+	background: linear-gradient(rgba(5, 86, 165, 1) 0%,rgba(0, 165, 110, 1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.leaf-border (@rad: 0px){
+	-webkit-border-top-left-radius: @rad;
+	-webkit-border-bottom-right-radius: @rad;
+	-moz-border-radius-topleft: @rad;
+	-moz-border-radius-bottomright: @rad;
+	border-top-left-radius: @rad;
+	border-bottom-right-radius: @rad;		
+}
