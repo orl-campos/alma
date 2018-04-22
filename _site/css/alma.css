@@ -174,3 +174,50 @@
 .bottom60 {
   margin-bottom: 60px;
 }
+/*  ------------------------------------------------------------
+      Page elements
+    ------------------------------------------------------------ */
+.carousel {
+  overflow-y: visible;
+  max-height: 530px;
+}
+.carousel .carousel-item .post-it {
+  height: 480px;
+  background-color: #e88585;
+  opacity: 0.8;
+  position: relative;
+  top: -335px;
+}
+.carousel .carousel-item .post-it p {
+  padding: 10px;
+}
+/*  ------------------------------------------------------------
+      Modules
+    ------------------------------------------------------------ */
+body nav.navbar {
+  padding: 1.5rem 1rem;
+}
+body #mySidenav {
+  padding-top: 15px;
+  flex-grow: 0;
+}
+body #mySidenav li.active {
+  border: #000000 2px solid;
+}
+body #mySidenav li:hover {
+  border: #000000 2px solid;
+}
+body #mySidenav li a {
+  color: #000000;
+}
+.footer {
+  background-color: #F4F4F5;
+}
+.hero-module.home {
+  height: 800px;
+  background-image: url(../images/water-right.jpg), url(../images/water-left.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom right,
+	      left,
+	      right;
+}
